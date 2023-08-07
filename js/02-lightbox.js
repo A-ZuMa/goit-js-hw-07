@@ -18,7 +18,7 @@ function createImages(arr) {
     
 gallery.insertAdjacentHTML('beforeend', createImages(galleryItems)); // Додаємо у HTML розмітку
 
-let lightbox = new SimpleLightbox('.gallery a', {
+const lightbox = new SimpleLightbox('.gallery a', {
     captionsData: 'alt',
     captionDelay: '250'
 });

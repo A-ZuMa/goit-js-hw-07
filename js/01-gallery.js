@@ -23,6 +23,9 @@ gallery.insertAdjacentHTML('beforeend', createImages(galleryItems)); // Дода
 
 function handlerClick(evt) {
     evt.preventDefault(); // Заборонити дефолтну поведінку
+    if (evt.currentTarget === evt.target) {
+        return;
+    }
     const originalPic = evt.target.dataset.source; // Дістаємо значення великої картинки
     const instance = basicLightbox.create(`
     <div class="modal">
