@@ -23,7 +23,7 @@ gallery.insertAdjacentHTML('beforeend', createImages(galleryItems)); // Дода
 
 function handlerClick(evt) {
     evt.preventDefault(); // Заборонити дефолтну поведінку
-    if (evt.currentTarget === evt.target) {
+    if (evt.target === evt.currentTarget) {
         return;
     }
     const originalPic = evt.target.dataset.source; // Дістаємо значення великої картинки
